@@ -52,9 +52,7 @@ jobs:
 
         sudo -E dpkg --add-architecture i386
         sudo -E apt-get update
-        sudo -E apt-get upgrade
-        sudo apt-get install 
-        
+               
         sudo -E apt-get install -y lib32gcc1 lib32stdc++6 libcurl4-gnutls-dev:i386 default-jre libc6:i386 libncurses5:i386 libstdc++6:i386 build-essential git libncurses5-dev libssl-dev mercurial texinfo zip  imagemagick subversion autoconf automake bison scons libglib2.0-dev bc mtools u-boot-tools flex wget cpio dosfstools libtool rsync device-tree-compiler gettext locales
         
         
