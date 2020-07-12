@@ -49,11 +49,13 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
-        sudo -E apt-get -qq update
+
         sudo -E dpkg --add-architecture i386
         sudo -E apt-get update
-        sudo -E apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386 build-essential git libncurses5-dev libssl-dev mercurial texinfo zip default-jre imagemagick subversion autoconf automake bison scons libglib2.0-dev bc mtools u-boot-tools flex wget cpio dosfstools libtool rsync device-tree-compiler gettext locales
+        sudo -E apt-get upgrade
+        sudo apt-get install 
+        
+        sudo -E apt-get install -y lib32gcc1 lib32stdc++6 libcurl4-gnutls-dev:i386 default-jre libc6:i386 libncurses5:i386 libstdc++6:i386 build-essential git libncurses5-dev libssl-dev mercurial texinfo zip  imagemagick subversion autoconf automake bison scons libglib2.0-dev bc mtools u-boot-tools flex wget cpio dosfstools libtool rsync device-tree-compiler gettext locales
         
         
         
