@@ -82,7 +82,7 @@ jobs:
         
         make O=$PWD/output/x86_64 BR2_EXTERNAL=$PWD -C $PWD/buildroot batocera-x86_64_defconfig
         cd output/x86_64
-        make
+        make -j8
         echo "::set-output name=status::success"
         echo "::set-env name=FILE_DATE::_$(date +"%Y%m%d%H%M")"
     - name: Check space usage
